@@ -19,7 +19,7 @@ export default NextAuth({
 
                 // Essentially promisify the LDAPJS client.bind function
                 return new Promise((resolve, reject) => {
-                    client.bind(`cn=${credentials.username},ou=${process.env.LDAP_OU},dc=${process.env.LDAP_DOMAIN_NAME},dc=me`, credentials.password, (error) => {
+                    client.bind(`uid=${credentials.username},ou=${process.env.LDAP_OU},dc=${process.env.LDAP_DOMAIN_NAME},dc=me`, credentials.password, (error) => {
                         if (error) {
                             console.error('Failed to log in')
                             return null

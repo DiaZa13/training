@@ -35,7 +35,7 @@ export default function SignIn({csrfToken}) {
 
                             <div class="form-floating mb-3">
                                 <input name="username" type="text" className="form-control" id="floatingInput" placeholder="cn"/>
-                                <label htmlFor="floatingInput">Common name</label>
+                                <label htmlFor="floatingInput">Username</label>
                             </div>
 
                             <div class="form-floating mb-3">
